@@ -359,7 +359,7 @@ class _EditProductFormState extends State<EditProductForm> {
       controller: titleFieldController,
       keyboardType: TextInputType.name,
       decoration: InputDecoration(
-        hintText: "e.g., Samsung Galaxy F41 Mobile",
+        hintText: "e.g., Orange, Apple, Carrot, Milk, etc.",
         labelText: "Product Title",
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
@@ -378,8 +378,8 @@ class _EditProductFormState extends State<EditProductForm> {
       controller: variantFieldController,
       keyboardType: TextInputType.name,
       decoration: InputDecoration(
-        hintText: "e.g., Fusion Green",
-        labelText: "Variant",
+        hintText: "e.g., Very Good, Good, Average, etc.",
+        labelText: "Quality",
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
       validator: (_) {
@@ -397,8 +397,7 @@ class _EditProductFormState extends State<EditProductForm> {
       controller: highlightsFieldController,
       keyboardType: TextInputType.multiline,
       decoration: InputDecoration(
-        hintText:
-            "e.g., RAM: 4GB | Front Camera: 30MP | Rear Camera: Quad Camera Setup",
+        hintText: "e.g, Fresh, Organic, No Preservatives, No Added Sugar, etc.",
         labelText: "Highlights",
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
@@ -419,7 +418,7 @@ class _EditProductFormState extends State<EditProductForm> {
       keyboardType: TextInputType.multiline,
       decoration: InputDecoration(
         hintText:
-            "e.g., This a flagship phone under made in India, by Samsung. With this device, Samsung introduces its new F Series.",
+            "e.g., This is a agroproduct produced locally in Pokhara and is very fresh and organic. ",
         labelText: "Description",
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
@@ -440,7 +439,7 @@ class _EditProductFormState extends State<EditProductForm> {
       keyboardType: TextInputType.name,
       decoration: InputDecoration(
         hintText: "e.g., HighTech Traders",
-        labelText: "Seller",
+        labelText: "Farmer/Producer",
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
       validator: (_) {
@@ -458,8 +457,8 @@ class _EditProductFormState extends State<EditProductForm> {
       controller: originalPriceFieldController,
       keyboardType: TextInputType.number,
       decoration: InputDecoration(
-        hintText: "e.g., 5999.0",
-        labelText: "Original Price (in INR)",
+        hintText: "e.g., 200",
+        labelText: "Price (in NPR)",
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
       validator: (_) {
@@ -477,8 +476,8 @@ class _EditProductFormState extends State<EditProductForm> {
       controller: discountPriceFieldController,
       keyboardType: TextInputType.number,
       decoration: InputDecoration(
-        hintText: "e.g., 2499.0",
-        labelText: "Discount Price (in INR)",
+        hintText: "e.g., 24.0",
+        labelText: "Discount Price (in NPR)",
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
       validator: (_) {

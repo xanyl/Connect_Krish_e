@@ -64,9 +64,22 @@ class ProductCard extends StatelessWidget {
           flex: 2,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Image.network(
+            child:
+                // Image.network(
+                //   product.images[0],
+                //   fit: BoxFit.contain,
+                // ),
+                Image.network(
               product.images[0],
               fit: BoxFit.contain,
+              errorBuilder: (BuildContext context, Object exception,
+                  StackTrace stackTrace) {
+                // Network image failed to load, show local image
+                return Image.asset(
+                  "assets/images/default.png", // Path to your local image
+                  fit: BoxFit.contain,
+                );
+              },
             ),
           ),
         ),
@@ -77,7 +90,7 @@ class ProductCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Flexible(
-                flex: 1, 
+                flex: 1,
                 child: Text(
                   "${product.title}\n",
                   style: TextStyle(
