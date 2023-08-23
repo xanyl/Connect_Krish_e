@@ -11,8 +11,8 @@ import 'package:e_commerce_app_flutter/services/database/product_database_helper
 import 'package:e_commerce_app_flutter/size_config.dart';
 import 'package:enum_to_string/enum_to_string.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:logger/logger.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Body extends StatefulWidget {
   final ProductType productType;
@@ -251,18 +251,21 @@ class _BodyState extends State<Body> {
     );
   }
 
-  String bannerFromProductType() {
+
+
+
+String bannerFromProductType() {
     switch (widget.productType) {
-      case ProductType.Electronics:
-        return "assets/images/electronics_banner.jpg";
-      case ProductType.Books:
-        return "assets/images/books_banner.jpg";
-      case ProductType.Fashion:
-        return "assets/images/fashions_banner.jpg";
-      case ProductType.Groceries:
-        return "assets/images/groceries_banner.jpg";
-      case ProductType.Art:
-        return "assets/images/arts_banner.jpg";
+      case ProductType.Grains:
+        return "assets/images/grains_banner.jpg";
+      case ProductType.Fruits:
+        return "assets/images/fruits_banner.jpg";
+      case ProductType.Vegetables:
+        return "assets/images/vegetables_banner.jpg";
+      case ProductType.Livestocks:
+        return "assets/images/livestocks_banner.jpg";
+      case ProductType.Dairy:
+        return "assets/images/dairy_banner.jpg";
       case ProductType.Others:
         return "assets/images/others_banner.jpg";
       default:
