@@ -40,7 +40,7 @@ class AsyncProgressDialog extends StatefulWidget {
   @override
   State<AsyncProgressDialog> createState() => _AsyncProgressDialogState();
 }
-
+// Compare this snippet from lib\components\async_progress_dialog.dart:
 class _AsyncProgressDialogState extends State<AsyncProgressDialog> {
   @override
   void initState() {
