@@ -28,7 +28,7 @@ class Body extends StatelessWidget {
               children: [
                 SizedBox(height: getProportionateScreenHeight(10)),
                 Text(
-                  "About Developer",
+                  "About Developers",
                   style: headingStyle,
                 ),
                 SizedBox(height: getProportionateScreenHeight(50)),
@@ -91,11 +91,60 @@ class Body extends StatelessWidget {
                       iconSize: 40,
                       padding: EdgeInsets.all(16),
                       onPressed: () async {
-                        const String instaUrl =
-                            "https://www.instagram.com/";
+                        const String instaUrl = "https://www.instagram.com/";
                         await launchUrl(instaUrl);
                       },
                     ),
+                    Spacer(),
+                  ],
+                ),
+
+                SizedBox(
+                    height: getProportionateScreenHeight(
+                        50)), // Space for the next developer
+
+                // Add information about the next developer here
+                InkWell(
+                  onTap: () async {
+                    const String linkedInUrl =
+                        "https://www.linkedin.com/in/bidhata-pandey-74984b226/";
+                    await launchUrl(linkedInUrl);
+                  },
+                  child: buildDeveloperAvatar(),
+                ),
+                SizedBox(height: getProportionateScreenHeight(30)),
+                Text(
+                  '" Bidhata Pandey "',
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+                Text(
+                  "SOE",
+                  style: TextStyle(
+                    fontSize: 21,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(height: getProportionateScreenHeight(30)),
+                Row(
+                  children: [
+                    Spacer(),
+                    IconButton(
+                      icon: SvgPicture.asset(
+                        "assets/icons/github_icon.svg",
+                        color: kTextColor.withOpacity(0.75),
+                      ),
+                      color: kTextColor.withOpacity(0.75),
+                      iconSize: 40,
+                      padding: EdgeInsets.all(16),
+                      onPressed: () async {
+                        const String githubUrl = "https://github.com/bidhata1";
+                        await launchUrl(githubUrl);
+                      },
+                    ),
+                    // Add other social media icons and links here if needed
                     Spacer(),
                   ],
                 ),
@@ -131,7 +180,7 @@ class Body extends StatelessWidget {
                     ),
                     Spacer(),
                   ],
-                )
+                ),
               ],
             ),
           ),
