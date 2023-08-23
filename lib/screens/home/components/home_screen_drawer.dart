@@ -292,7 +292,7 @@ class HomeScreenDrawer extends StatelessWidget {
     return ExpansionTile(
       leading: Icon(Icons.business),
       title: Text(
-        "I am Seller",
+        "I am Farmer",
         style: TextStyle(fontSize: 16, color: Colors.black),
       ),
       children: [
