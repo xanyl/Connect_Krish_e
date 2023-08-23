@@ -8,3 +8,5 @@ Future<void> main() async {
 
   runApp(App());
 }
+  
+// Compare this snippet from lib\app.dart:
