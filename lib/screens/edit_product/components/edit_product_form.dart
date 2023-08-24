@@ -438,7 +438,7 @@ class _EditProductFormState extends State<EditProductForm> {
       controller: sellerFieldController,
       keyboardType: TextInputType.name,
       decoration: InputDecoration(
-        hintText: "e.g., HighTech Traders",
+        hintText: "e.g., ABC Farm, XYZ Farm, etc.",
         labelText: "Farmer/Producer",
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),

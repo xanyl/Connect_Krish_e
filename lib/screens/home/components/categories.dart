@@ -3,11 +3,12 @@ import 'category_card.dart';
 
 class Categories extends StatelessWidget {
   final List<Map<String, dynamic>> categories = [
-    {"icon": "assets/icons/Flash Icon.svg", "text": "Flash Deal"},
-    {"icon": "assets/icons/Bill Icon.svg", "text": "Bill"},
-    {"icon": "assets/icons/Game Icon.svg", "text": "Game"},
-    {"icon": "assets/icons/Gift Icon.svg", "text": "Daily Gift"},
-    {"icon": "assets/icons/Discover.svg", "text": "More"},
+    {"icon": "assets/icons/Grains.svg", "text": "Grain"},
+    {"icon": "assets/icons/Fruits.svg", "text": "Fruits"},
+    {"icon": "assets/icons/Vegetables.svg", "text": "Vegetables"},
+    {"icon": "assets/icons/Livestocks.svg", "text": "Livestocks"},
+    {"icon": "assets/icons/Dairy.svg", "text": "Dairy"},
+    {"icon": "assets/icons/Others.svg", "text": "Others"},
   ];
   @override
   Widget build(BuildContext context) {
