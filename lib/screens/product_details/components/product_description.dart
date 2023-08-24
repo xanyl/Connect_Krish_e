@@ -52,7 +52,7 @@ class ProductDescription extends StatelessWidget {
                         style: TextStyle(
                           color: kPrimaryColor,
                           fontWeight: FontWeight.w900,
-                          fontSize: 22,
+                          fontSize: 24,
                         ),
                         children: [
                           TextSpan(
@@ -61,7 +61,7 @@ class ProductDescription extends StatelessWidget {
                               decoration: TextDecoration.lineThrough,
                               color: kTextColor,
                               fontWeight: FontWeight.normal,
-                              fontSize: 13,
+                              fontSize: 16,
                             ),
                           ),
                         ],
@@ -93,7 +93,7 @@ class ProductDescription extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 16),
             ExpandableText(
               title: "Highlights",
               content: product.highlights,
