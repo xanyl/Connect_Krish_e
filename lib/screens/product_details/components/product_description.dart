@@ -61,7 +61,7 @@ class ProductDescription extends StatelessWidget {
                               decoration: TextDecoration.lineThrough,
                               color: kTextColor,
                               fontWeight: FontWeight.normal,
-                              fontSize: 16,
+                              fontSize: 14,
                             ),
                           ),
                         ],

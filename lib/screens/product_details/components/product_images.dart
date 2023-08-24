@@ -39,7 +39,7 @@ class ProductImages extends StatelessWidget {
                 child: Container(
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.orange.withOpacity(0.1),
                     borderRadius: BorderRadius.all(
                       Radius.circular(30),
                     ),
@@ -82,8 +82,8 @@ class ProductImages extends StatelessWidget {
         margin:
             EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(8)),
         padding: EdgeInsets.all(getProportionateScreenHeight(8)),
-        height: getProportionateScreenWidth(48),
-        width: getProportionateScreenWidth(48),
+        height: getProportionateScreenWidth(40),
+        width: getProportionateScreenWidth(40),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),

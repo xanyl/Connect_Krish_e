@@ -52,7 +52,7 @@ class ProductReviewsSection extends StatelessWidget {
                                   color: kTextColor,
                                   width: 40,
                                 ),
-                                SizedBox(height: 8),
+                                SizedBox(height: 10),
                                 Text(
                                   "No reviews yet",
                                   style: TextStyle(
