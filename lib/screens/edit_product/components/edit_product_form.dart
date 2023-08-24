@@ -264,7 +264,7 @@ class _EditProductFormState extends State<EditProductForm> {
                 )
                 .toList(),
             hint: Text(
-              "Chose Product Type",
+              "Choose Product Type",
             ),
             style: TextStyle(
               color: kTextColor,
@@ -438,7 +438,7 @@ class _EditProductFormState extends State<EditProductForm> {
       controller: sellerFieldController,
       keyboardType: TextInputType.name,
       decoration: InputDecoration(
-        hintText: "e.g., HighTech Traders",
+        hintText: "e.g., ABC Farm, XYZ Farm, etc.",
         labelText: "Farmer/Producer",
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
@@ -477,7 +477,7 @@ class _EditProductFormState extends State<EditProductForm> {
       keyboardType: TextInputType.number,
       decoration: InputDecoration(
         hintText: "e.g., 24.0",
-        labelText: "Discount Price (in NPR)",
+        labelText: "Discounted Price (in NPR)",
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
       validator: (_) {
