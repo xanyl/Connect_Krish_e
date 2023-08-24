@@ -13,7 +13,7 @@ class EditProductScreen extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => ProductDetails(),
       child: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(), 
         body: Body(
           productToEdit: productToEdit,
         ),

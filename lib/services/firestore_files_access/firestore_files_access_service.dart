@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -6,7 +7,7 @@ class FirestoreFilesAccess {
   FirestoreFilesAccess._privateConstructor();
   static FirestoreFilesAccess _instance =
       FirestoreFilesAccess._privateConstructor();
-  factory FirestoreFilesAccess() {
+  factory FirestoreFilesAccess() { 
     return _instance;
   }
   FirebaseFirestore _firebaseFirestore;
@@ -21,7 +22,9 @@ class FirestoreFilesAccess {
     final Reference firestorageRef = FirebaseStorage.instance.ref();
     final snapshot = await firestorageRef.child(path).putFile(file);
     final downloadUrl = await snapshot.ref.getDownloadURL();
+    // log(downloadUrl.toString());
     return downloadUrl;
+    
   }
 
   Future<bool> deleteFileFromPath(String path) async {

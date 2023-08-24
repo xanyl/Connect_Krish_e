@@ -575,7 +575,7 @@ class _EditProductFormState extends State<EditProductForm> {
     if (productId == null) return;
     bool allImagesUploaded = false;
     try {
-      allImagesUploaded = await uploadProductImages(productId);
+      allImagesUploaded = await uploadProductImages(context, productId);
       if (allImagesUploaded == true) {
         snackbarMessage = "All images uploaded successfully";
       } else {
@@ -633,47 +633,40 @@ class _EditProductFormState extends State<EditProductForm> {
     Navigator.pop(context);
   }
 
-  Future<bool> uploadProductImages(String productId) async {
+  Future<bool> uploadProductImages(
+      BuildContext scaffoldContext, String productId) async {
     bool allImagesUpdated = true;
-    final productDetails = Provider.of<ProductDetails>(context, listen: false);
+
+    final productDetails =
+        Provider.of<ProductDetails>(scaffoldContext, listen: false);
+
     for (int i = 0; i < productDetails.selectedImages.length; i++) {
       if (productDetails.selectedImages[i].imgType == ImageType.local) {
         print("Image being uploaded: " + productDetails.selectedImages[i].path);
         String downloadUrl;
+
         try {
-          final imgUploadFuture = FirestoreFilesAccess().uploadFileToPath(
-              File(productDetails.selectedImages[i].path),
-              ProductDatabaseHelper().getPathForProductImage(productId, i));
-          downloadUrl = await showDialog(
-            context: context,
-            builder: (context) {
-              return AsyncProgressDialog(
-                imgUploadFuture,
-                message: Text(
-                    "Uploading Images ${i + 1}/${productDetails.selectedImages.length}"),
-              );
-            },
+          downloadUrl = await FirestoreFilesAccess().uploadFileToPath(
+            File(productDetails.selectedImages[i].path),
+            ProductDatabaseHelper().getPathForProductImage(productId, i),
           );
         } on FirebaseException catch (e) {
           Logger().w("Firebase Exception: $e");
-        } catch (e) {
-          Logger().w("Firebase Exception: $e");
-        } finally {
-          if (downloadUrl != null) {
-            productDetails.selectedImages[i] =
-                CustomImage(imgType: ImageType.network, path: downloadUrl);
-          } else {
-            allImagesUpdated = false;
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                content:
-                    Text("Couldn't upload image ${i + 1} due to some issue"),
-              ),
-            );
-          }
+          allImagesUpdated = false;
+          ScaffoldMessenger.of(scaffoldContext).showSnackBar(
+            SnackBar(
+              content: Text("Couldn't upload image ${i + 1} due to some issue"),
+            ),
+          );
+        }
+
+        if (downloadUrl != null) {
+          productDetails.selectedImages[i] =
+              CustomImage(imgType: ImageType.network, path: downloadUrl);
         }
       }
     }
+
     return allImagesUpdated;
   }
 
