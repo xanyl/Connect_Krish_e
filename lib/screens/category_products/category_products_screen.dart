@@ -18,5 +18,5 @@ class CategoryProductsScreen extends StatelessWidget {
         productType: productType,
       ),
     );
-  }
+  } 
 }
