@@ -178,10 +178,10 @@ class _BodyState extends State<Body> {
             image: DecorationImage(
               image: AssetImage(bannerFromProductType()),
               fit: BoxFit.fill,
-              colorFilter: ColorFilter.mode(
-                kPrimaryColor,
-                BlendMode.hue,
-              ),
+              // colorFilter: ColorFilter.mode(
+              //   kBannerColor,
+              //   BlendMode.hue,
+              // ),
             ),
             borderRadius: BorderRadius.circular(30),
           ),
@@ -257,7 +257,7 @@ class _BodyState extends State<Body> {
 String bannerFromProductType() {
     switch (widget.productType) {
       case ProductType.Grains:
-        return "assets/images/grains_banner.jpg";
+        return "assets/images/grains_banner.jpg"; 
       case ProductType.Fruits:
         return "assets/images/fruits_banner.jpg";
       case ProductType.Vegetables:
