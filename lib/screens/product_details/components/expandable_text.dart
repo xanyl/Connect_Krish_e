@@ -27,14 +27,14 @@ class ExpandableText extends StatelessWidget {
               title,
               style: TextStyle(
                 color: Colors.black,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w700,
                 fontSize: 16,
               ),
             ),
             Divider(
-              height: 8,
-              thickness: 1,
-              endIndent: 16,
+              height: 10,
+              thickness: 2,
+              endIndent: 10,
             ),
             Text(
               content,
@@ -53,7 +53,7 @@ class ExpandableText extends StatelessWidget {
                         : "Show less details",
                     style: TextStyle(
                       color: kPrimaryColor,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
                   const SizedBox(width: 5),
