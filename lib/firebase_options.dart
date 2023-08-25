@@ -50,21 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyC9jv_ewBwPIYW76ipGjZZV3-JxAdVVOvY',
-    appId: '1:384097211371:android:513ea24c69a6e516bc7fae',
-    messagingSenderId: '384097211371',
-    projectId: 'connect-krishi',
-    databaseURL: 'https://connect-krishi-default-rtdb.firebaseio.com',
-    storageBucket: 'connect-krishi.appspot.com',
+    apiKey: 'AIzaSyCkcbgBK7s2wa4-dr9PZSGBp-7dDlAnePo',
+    appId: '1:917578209414:android:def87b1168b7a399f81907',
+    messagingSenderId: '917578209414',
+    projectId: 'new-connect-krishi',
+    storageBucket: 'new-connect-krishi.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyA-XAWHctmmunkQTyNAwB8ouigq8tuat4s',
-    appId: '1:384097211371:ios:a4c9668bfe6b9d1abc7fae',
-    messagingSenderId: '384097211371',
-    projectId: 'connect-krishi',
-    databaseURL: 'https://connect-krishi-default-rtdb.firebaseio.com',
-    storageBucket: 'connect-krishi.appspot.com',
+    apiKey: 'AIzaSyCvh-t-w9PwXPTiNIwqVuFZiFkdpWk7iBQ',
+    appId: '1:917578209414:ios:2587ef4a65acc7fdf81907',
+    messagingSenderId: '917578209414',
+    projectId: 'new-connect-krishi',
+    storageBucket: 'new-connect-krishi.appspot.com',
+    iosClientId: '917578209414-94tuammkbqfcs83bbo3k2mjd8qc968cb.apps.googleusercontent.com',
     iosBundleId: 'com.example.eCommerceAppFlutter',
   );
 }

@@ -1,46 +1,36 @@
 {
   "project_info": {
-    "project_number": "384097211371",
-    "firebase_url": "https://connect-krishi-default-rtdb.firebaseio.com",
-    "project_id": "connect-krishi",
-    "storage_bucket": "connect-krishi.appspot.com"
+    "project_number": "917578209414",
+    "project_id": "new-connect-krishi",
+    "storage_bucket": "new-connect-krishi.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:384097211371:android:0bd14bc3078c5d63bc7fae",
-        "android_client_info": {
-          "package_name": "com.example.connect_krishi"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyC9jv_ewBwPIYW76ipGjZZV3-JxAdVVOvY"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:384097211371:android:513ea24c69a6e516bc7fae",
+        "mobilesdk_app_id": "1:917578209414:android:def87b1168b7a399f81907",
         "android_client_info": {
           "package_name": "com.example.e_commerce_app_flutter"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "917578209414-bvadqlut8rv7786nsvtbf0b4f85lp6d2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyC9jv_ewBwPIYW76ipGjZZV3-JxAdVVOvY"
+          "current_key": "AIzaSyCkcbgBK7s2wa4-dr9PZSGBp-7dDlAnePo"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917578209414-bvadqlut8rv7786nsvtbf0b4f85lp6d2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
