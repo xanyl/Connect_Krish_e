@@ -50,7 +50,7 @@ class ProductReviewsSection extends StatelessWidget {
                                 SvgPicture.asset(
                                   "assets/icons/review.svg",
                                   color: kTextColor,
-                                  width: 40,
+                                  width: 60,
                                 ),
                                 SizedBox(height: 10),
                                 Text(
@@ -112,6 +112,7 @@ class ProductReviewsSection extends StatelessWidget {
         borderRadius: BorderRadius.circular(14),
       ),
       child: Row(
+        
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
@@ -120,11 +121,11 @@ class ProductReviewsSection extends StatelessWidget {
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w900,
-                fontSize: getProportionateScreenWidth(16),
+                fontSize: getProportionateScreenWidth(12),
               ),
             ),
           ),
-          SizedBox(width: 5),
+          // SizedBox(width: 10,height: 20,),
           Icon(
             Icons.star,
             color: Colors.white,
