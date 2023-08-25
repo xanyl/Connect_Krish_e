@@ -24,7 +24,7 @@ class ProductDescription extends StatelessWidget {
               TextSpan(
                   text: product.title,
                   style: TextStyle(
-                    fontSize: 21,
+                    fontSize: 22,
                     color: Colors.black,
                     fontWeight: FontWeight.w600,
                   ),
@@ -38,21 +38,21 @@ class ProductDescription extends StatelessWidget {
                     ),
                   ]),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 14),
             SizedBox(
               height: getProportionateScreenHeight(64),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Flexible(
-                    flex: 4,
+                    flex: 3,
                     child: Text.rich(
                       TextSpan(
                         text: "\₹${product.discountPrice}   ",
                         style: TextStyle(
                           color: kPrimaryColor,
                           fontWeight: FontWeight.w900,
-                          fontSize: 24,
+                          fontSize: 22,
                         ),
                         children: [
                           TextSpan(
@@ -93,7 +93,7 @@ class ProductDescription extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 20),
             ExpandableText(
               title: "Highlights",
               content: product.highlights,
