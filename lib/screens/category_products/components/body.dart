@@ -178,10 +178,10 @@ class _BodyState extends State<Body> {
             image: DecorationImage(
               image: AssetImage(bannerFromProductType()),
               fit: BoxFit.fill,
-              // colorFilter: ColorFilter.mode(
-              //   kBannerColor,
-              //   BlendMode.hue,
-              // ),
+              colorFilter: ColorFilter.mode(
+                kBannerColor,
+                BlendMode.colorBurn,
+              ),
             ),
             borderRadius: BorderRadius.circular(30),
           ),
