@@ -70,7 +70,7 @@ class ProductCard extends StatelessWidget {
                 //   fit: BoxFit.contain,
                 // ),
                 Image.network(
-              product.images[0] ?? "",
+              product.images[0],
               fit: BoxFit.contain,
               errorBuilder: (BuildContext context, Object exception,
                   StackTrace stackTrace) {
