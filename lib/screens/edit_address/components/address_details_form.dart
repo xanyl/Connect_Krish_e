@@ -258,7 +258,7 @@ class _AddressDetailsFormState extends State<AddressDetailsForm> {
           return FIELD_REQUIRED_MSG;
         } else if (!isNumeric(pincodeFieldController.text)) {
           return "Only digits field";
-        } else if (pincodeFieldController.text.length != 6) {
+        } else if (pincodeFieldController.text.length != 5) {
           return "PINCODE must be of 6 Digits only";
         }
         return null;
