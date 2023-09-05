@@ -1,3 +1,5 @@
+/// The UserDatabaseHelper class is responsible for handling database operations related to user data in
+/// a Flutter e-commerce app.
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_commerce_app_flutter/models/Address.dart';
 import 'package:e_commerce_app_flutter/models/CartItem.dart';

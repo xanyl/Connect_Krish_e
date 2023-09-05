@@ -1,3 +1,6 @@
+/// The AddressDetailsForm class is a form widget that allows users to enter and save address details,
+/// including title, receiver name, address lines, city, district, state, landmark, pincode, and phone
+/// number.
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_commerce_app_flutter/components/default_button.dart';
 import 'package:e_commerce_app_flutter/models/Address.dart';

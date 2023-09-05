@@ -1,3 +1,5 @@
+/// The `AppReviewDatabaseHelper` class is a helper class for managing app reviews in a Firestore
+/// database.
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_commerce_app_flutter/models/AppReview.dart';
 import 'package:e_commerce_app_flutter/services/authentification/authentification_service.dart';
