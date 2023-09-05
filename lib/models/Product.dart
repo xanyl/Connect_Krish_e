@@ -1,3 +1,5 @@
+/// The `Product` class represents a product in an mobile app and contains various properties and
+/// methods related to the product.
 import 'package:e_commerce_app_flutter/models/Model.dart';
 import 'package:enum_to_string/enum_to_string.dart';
 

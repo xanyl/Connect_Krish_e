@@ -1,3 +1,5 @@
+/// The `ProductDatabaseHelper` class is a helper class that provides methods for interacting with the
+/// Firestore database to perform operations related to products and reviews.
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_commerce_app_flutter/models/Product.dart';
 import 'package:e_commerce_app_flutter/models/Review.dart';
