@@ -43,6 +43,7 @@ dependencies:
   string_validator: ^0.1.4
   swipedetector: ^1.2.0
   url_launcher: ^5.7.10
+  khalti_flutter: ^0.0.1
 
 dev_dependencies:
   flutter_test:
