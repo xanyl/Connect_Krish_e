@@ -121,6 +121,23 @@ class ProductDescription extends StatelessWidget {
                 ],
               ),
             ),
+            Text.rich(
+              TextSpan(
+                text: "Phone Number ",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                ),
+                children: [
+                  TextSpan(
+                    text: "9817145625",
+                    style: TextStyle(
+                      decoration: TextDecoration.underline,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],
