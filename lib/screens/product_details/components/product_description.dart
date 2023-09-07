@@ -1,9 +1,12 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_commerce_app_flutter/models/Product.dart';
 import 'package:e_commerce_app_flutter/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:logger/logger.dart';
 
 import '../../../constants.dart';
+import '../../../services/database/user_database_helper.dart';
 import 'expandable_text.dart';
 
 class ProductDescription extends StatelessWidget {
@@ -121,23 +124,38 @@ class ProductDescription extends StatelessWidget {
                 ],
               ),
             ),
-            Text.rich(
-              TextSpan(
-                text: "Phone Number ",
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                ),
-                children: [
+            StreamBuilder<DocumentSnapshot>(
+              stream: UserDatabaseHelper().currentUserDataStream,
+              builder: (context, snapshot) {
+                if (snapshot.hasError) {
+                  final error = snapshot.error;
+                  Logger().w(error.toString());
+                }
+                String currentPhone;
+                if (snapshot.hasData && snapshot.data != null)
+                  currentPhone =
+                      snapshot.data.data()[UserDatabaseHelper.PHONE_KEY];
+
+                return Text.rich(
                   TextSpan(
-                    text: "9817145625",
+                    text: "Phone Number ",
                     style: TextStyle(
-                      decoration: TextDecoration.underline,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
                     ),
+                    children: [
+                      if (currentPhone != null)
+                        TextSpan(
+                          text: currentPhone,
+                          style: TextStyle(
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
+                    ],
                   ),
-                ],
-              ),
-            ),
+                );
+              },
+            )
           ],
         ),
       ],
