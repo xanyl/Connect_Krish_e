@@ -476,7 +476,7 @@ class _EditProductFormState extends State<EditProductForm> {
       controller: discountPriceFieldController,
       keyboardType: TextInputType.number,
       decoration: InputDecoration(
-        hintText: "e.g., 24.0",
+        hintText: "e.g., 190.0",
         labelText: "Discounted Price (in NPR)",
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
