@@ -123,7 +123,7 @@ class _ChangePhoneNumberFormState extends State<ChangePhoneNumberForm> {
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           final error = snapshot.error;
-          Logger().w(error.toString());
+          Logger().w(error.toString()); 
         }
         String currentPhone;
         if (snapshot.hasData && snapshot.data != null)

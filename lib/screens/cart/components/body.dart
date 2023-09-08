@@ -19,6 +19,7 @@ import 'package:future_progress_dialog/future_progress_dialog.dart';
 import 'package:logger/logger.dart';
 
 import '../../../utils.dart';
+import '../../payment/khalti_payment.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -343,7 +344,7 @@ class _BodyState extends State<Body> {
             "Delete",
             style: TextStyle(
               color: Colors.white,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.bold, 
               fontSize: 15,
             ),
           ),
@@ -356,11 +357,18 @@ class _BodyState extends State<Body> {
     shutBottomSheet();
     final confirmation = await showConfirmationDialog(
       context,
-      "This is just a Project Testing App so, no actual Payment Interface is available.\nDo you want to proceed for Mock Ordering of Products?",
+      "Do you want to proceed?",
     );
     if (confirmation == false) {
       return;
     }
+      Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) => KhaltiPaymentScreen(),
+    ),
+  );
+
     final orderFuture = UserDatabaseHelper().emptyCart();
     orderFuture.then((orderedProductsUid) async {
       if (orderedProductsUid != null) {

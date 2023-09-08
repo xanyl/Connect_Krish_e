@@ -282,6 +282,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.4"
+  khalti_flutter:
+    dependency: "direct main"
+    description:
+      name: khalti_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.1"
   logger:
     dependency: "direct main"
     description:
